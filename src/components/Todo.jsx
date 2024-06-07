@@ -46,6 +46,8 @@ export default function Todo() {
                 <form>
                     <div className='flex items-center gap-x-4'>
                         <Input
+                            isFocused
+                            placeholder='Add a new task'
                             value={newTask}
                             onChange={(e) => setNewTask(e.target.value)}
                         />
@@ -79,7 +81,7 @@ export default function Todo() {
                                 )}
                                 <div className='flex gap-x-2 items-center'>
                                     <Button
-                                        className='px-2 py-1 border border-green-500 text-xs rounded-md hover:bg-green-500 hover:text-white text-neutral-900'
+                                        className='text-slate-900 px-2 py-1 border border-green-500 text-xs rounded-md hover:bg-green-500 hover:text-white text-neutral-900'
                                         onClick={() =>
                                             handleCompleteTask(task.id)
                                         }>
@@ -89,7 +91,7 @@ export default function Todo() {
                                             : 'Incomplete'}
                                     </Button>
                                     <Button
-                                        className='px-2 py-1 border border-red-500 text-xs rounded-md hover:bg-red-500 hover:text-white text-neutral-900'
+                                        className='text-slate-900 px-2 py-1 border border-red-500 text-xs rounded-md hover:bg-red-500 hover:text-white '
                                         onClick={() =>
                                             handleDeleteTask(task.id)
                                         }>

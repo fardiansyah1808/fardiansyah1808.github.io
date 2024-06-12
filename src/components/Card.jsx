@@ -17,11 +17,7 @@ function Body({ children }) {
     return <div className='p-4 leading-relaxed'>{children}</div>;
 }
 function Footer({ children }) {
-    return (
-        <div className='bg-slate-50 p-4 flex flex-end justify-end'>
-            {children}
-        </div>
-    );
+    return <div className='bg-slate-50 p-4 '>{children}</div>;
 }
 
 Card.Title = Title;
